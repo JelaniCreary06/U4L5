@@ -6,6 +6,7 @@ const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Op
 
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileUrl, { attribution });
+
 setInterval(async () => {
   (await fetch('https://api.wheretheiss.at/v1/satellites/25544').then(async response => {
     const data = await response.json();
